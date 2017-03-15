@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Arts fest of MITS">
+		<meta name="keywords" content="varnam,varnammits">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Varnam 2k17</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/responsive.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			.modalg {
+				display: none; /* Hidden by default */
+				position: fixed; /* Stay in place */
+				z-index: 1; /* Sit on top */
+				padding-top: 100px; /* Location of the box */
+				left: 0;
+				top: 0;
+				width: 100%; /* Full width */
+				height: 100%; /* Full height */
+				overflow: auto; /* Enable scroll if needed */
+				background-color: rgb(0,0,0); /* Fallback color */
+				background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+			}
+
+			/* Modal Content (image) */
+			.modal-contentg {
+				margin: auto;
+				display: block;
+				width: 80%;
+				max-width: 700px;
+			}
+
+			/* Add Animation */
+			.modal-contentg{    
+				-webkit-animation-name: zoom;
+				-webkit-animation-duration: 0.6s;
+				animation-name: zoom;
+				animation-duration: 0.6s;
+			}
+
+			@-webkit-keyframes zoom {
+				from {-webkit-transform:scale(0)} 
+				to {-webkit-transform:scale(1)}
+			}
+
+			@keyframes zoom {
+				from {transform:scale(0)} 
+				to {transform:scale(1)}
+			}
+
+			/* The Close Button */
+				.closemodalg{
+				font-size:150px;
+				margin-left:35px;
+				color: #fff;
+				margin-top:10px;
+				font-size: 40px;
+				font-weight: bold;
+				transition: 0.3s;
+			}
+
+			.closemodalg:hover,
+			.closemodalg:focus {
+				color: #bbb;
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+			/* 100% Image Width on Smaller Screens */
+			@media only screen and (max-width: 700px){
+				.modal-contentg {
+					width: 100%;
+				}
+			}	
+			>>>>>>> origin/master
+			@for $i from 1 through 6 {
+				@keyframes preload-show-#{$i}{
+					from{
+						transform: rotateZ(60* $i + deg) rotateY(-90deg) rotateX(0deg);
+						border-left-color: #9c2f2f;
+					}
+				}
+				@keyframes preload-hide-#{$i}{
+					to{
+						transform: rotateZ(60* $i + deg) rotateY(-90deg) rotateX(0deg);
+						border-left-color: #9c2f2f;
+					}
+				}
+				@keyframes preload-cycle-#{$i}{
+					$startIndex: $i*5;
+					$reverseIndex: (80 - $i*5);
+					#{$startIndex * 1%}{
+						transform: rotateZ(60* $i + deg) rotateY(90deg) rotateX(0deg);
+						border-left-color: #9c2f2f;
+					}
+					#{$startIndex + 5%},
+					#{$reverseIndex * 1%}{
+						transform: rotateZ(60* $i + deg) rotateY(0) rotateX(0deg);
+						border-left-color: #f7484e;
+					}
+					#{$reverseIndex + 5%},
+					100%{
+						transform: rotateZ(60* $i + deg) rotateY(90deg) rotateX(0deg);
+						border-left-color: #9c2f2f;
+					}
+				}
+			}
+			@keyframes preload-flip{
+				0%{
+					transform: rotateY(0deg) rotateZ(-60deg);
+				}
+				100%{
+					transform: rotateY(360deg) rotateZ(-60deg);
+				}
+			}
+			.preloader{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+					font-size: 20px;
+					display: block;
+					width: 3.75em;
+					height: 4.25em;
+					margin-left: -1.875em;
+				margin-top: -2.125em;
+					transform-origin: center center;
+					transform: rotateY(180deg) rotateZ(-60deg);
+					.slice{
+						border-top: 1.125em solid transparent;
+						border-right: none;
+						border-bottom: 1em solid transparent;
+						border-left: 1.875em solid #f7484e;
+						position: absolute;
+						top: 0px;
+						left: 50%;
+						transform-origin: left bottom;
+						border-radius: 3px 3px 0 0;
+					}
+					@for $i from 1 through 6
+					{
+						.slice:nth-child(#{$i})
+						{
+							transform: rotateZ(60* $i + deg) rotateY(0deg) rotateX(0);
+							animation: .15s linear .9 - $i*.08s preload-hide-#{$i} both 1;
+						}	
+					}
+					&.loading
+					{
+						animation: 2s preload-flip steps(2) infinite both;
+						@for $i from 1 through 6
+						{
+						.slice:nth-child(#{$i})
+							{
+								animation: 2s preload-cycle-#{$i} linear infinite both;
+							transform: rotateZ(60* $i + deg) rotateY(90deg) rotateX(0);
+						}
+						}
+					}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="preloader loading">
+		  <span class="slice"></span>
+		  <span class="slice"></span>
+		  <span class="slice"></span>
+		  <span class="slice"></span>
+		  <span class="slice"></span>
+		  <span class="slice"></span>
+		</div>
+		<header id="header" role="banner">
+			<div class="main-nav">
+				<div class="container">
+					<div class="row">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="index.html">
+								<img class="img-responsive" src="images/varnam.png" style="height:100px;margin-top:15%;" alt="logo">
+							</a>
+						</div>
+						<div class="collapse navbar-collapse">
+							<ul class="nav navbar-nav navbar-right">
+								<li class="scroll active"><a href="#home">Home</a></li>
+								<li class="scroll"><a href="#event">Events</a></li>
+								<li class="scroll"><a href="#about">About</a></li>
+								<li class="scroll"><a href="#gallery">Gallery</a></li>
+                                <li class="scroll"><a href="#sponsor">Downloads</a></li>
+								<li class="scroll"><a href="#contact">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section id="home" class="section">
+			<div id="main-slider" class="carousel slide" data-ride="carousel">
+
+				<ol class="carousel-indicators">
+					<li data-target="#main-slider" data-slide-to="0" class="active"></li>
+					<li data-target="#main-slider" data-slide-to="1"></li>
+					<li data-target="#main-slider" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item">
+						<img class="img-responsive" src="images/slider/bg1.jpg" alt="slider">
+					</div>
+					<div class="item active">
+						<img class="img-responsive" src="images/slider/bg2.jpg" alt="slider">
+					</div>
+					<div class="item">
+						<img class="img-responsive" src="images/slider/bg3.jpg" alt="slider">
+					</div>
+                    
+                    
+				</div>
+			</div>
+		</section>
+		<section class="none">
+			<div id="essay" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Essay Writing</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Separate event for Malayalam and English</li>
+							<li>4 members from each House</li>
+							<li>No reference material will be permitted during the competition</li>
+							<li>Judgment will most likely be based on the qualities like the development of the theme, composition, tone, appropriateness of style, correctness of language,originality and general impression</li>
+							<li>Participants should bring the necessary writing material except Paper</li>
+							<li>Maximum time is 1 hr</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="short" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Short Story Writing</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Separate event for Malayalam and English</li>
+							<li> 4 members from each House</li>
+							<li> The topic will be given on the spot</li>
+							<li> The language of the competition shall be strictly used</li>
+							<li> No reference material will be permitted during the competition</li>
+							<li> Judgment will be based on qualities like delineation of Character, plot construction, theme, diction, correctness and style of language and , general impression</li>
+							<li> The story shall be original, not copied or condensed in any form from other writings</li>
+							<li> Maximum time is 1 hr</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+            
+			<div id="poetryw" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Poetry Writing</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Separate event for Malayalam and English</li>
+							<li> 4 members from each House</li>
+ 						 	<li> Maximum time allowed for writing the Poetry is One hour</li>
+ 						 	<li> The topic will be given on the spot</li>
+ 						 	<li> The language of the competition shall be strictly used</li>
+ 						 	<li> No reference material will be allowed in the competition hall</li>
+ 						 	<li> Judgment will be based on qualities like theme diction, imagery, emotion, appropriate use of language, general impression etc</li>
+ 						 	<li> The poem shall be original and not borrowed or copied from others</li>
+ 						 	<li> Participants should bring the necessary writing material except Paper</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="poetryr" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">POETRY RECITATION</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Separate event for Malayalam and English</li>
+							<li> 2 members from each House</li>
+							<li> Maximum time allowed is 10 minutes</li>
+							<li> Judgment will be based on clarity of speech, expression of emotion and ideas, Rhythm, Tone, general impression etc</li>
+							<li> Submit one copy of poem to the judging panel before the performance</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="quiz" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Quiz</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> One Group (max 3 members) from each house</li>
+							<li> There will be a 3 or 4 rounds</li>
+							<li> The finals will include audio - visual and oral rounds</li>
+							<li> The specific rules regarding evaluation procedure, time to reply a particular answer and the type of round will be given before the actual start of the competition by the Quiz Master</li>
+							<li> The medium will be English</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="elocution" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Elocution</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Separate event for Malayalam and English</li>
+							<li> 2 members from each House</li>
+							<li> The topic will be given 10 minutes before the start of the competition</li>
+							<li> After the release of the topic, participants will not be allowed to use mobile phone, laptop, to refer the books or to discuss</li>
+							<li> The language of the competition shall strictly be used</li>
+							<li> Reading of the speech is not permitted, but the participant may refer to written points for the speech</li>
+							<li> Judgment will most likely be based on qualities like correctness of language, clarity of expression, development of the theme and other rhetorical qualities</li>
+							<li> Maximum performance time– 7mts</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+            
+			<div id="westvocal" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Western Vocal Solo</h4>
+					</div>
+					<div class="modal-body">
+                        <ol>
+						<li> 2 participants from each House</li>
+						<li> Maximum time is 5 minutes</li>
+						<li> Permitted to use a single instrument, but no karaoke is allowed</li>
+                        </ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+            
+			<div id="instrument" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Instrumental Music</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Wind, Percussion, String</li>
+							<li> 2 participants from each House</li>
+							<li> Maximum time is 5 minutes</li>
+							<li> The participant can use only a single instrument</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="painting" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Painting</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Water, Acrylic</li>
+							<li> 3 Participants from each House</li>
+							<li> Item will be conducted on the spot</li>
+							<li> Duration will not be more than 2 hours</li>
+							<li> Size of the painting will be half imperial size drawing paper ie, 22 inches X 15 inches</li>
+							<li> Chart paper can be used for Water colour painting and canvas papers can be used for Acrylic painting</li>
+							<li> Painting can be done in oil, water/Acrylic colours</li>
+							<li> Participants should mention their medium (water/ acrylic colours) in the entry form</li>
+							<li> Artist must bring the necessary accessories including Paper/Canvas paper, Colours ,medium etc</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="cartoon" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Cartooning</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> 3 Participants from each House</li>
+							<li> Item will be conducted On the Spot on the given subject/idea</li>
+							<li> Duration will not be more than 2 hours</li>
+							<li> Artist must bring the necessary accessories like black pen, black pencils, black sketch pens and chart papers</li>
+							<li> Topic/ Theme will be given on the spot</li>
+							<li> Cartooning must be creative and genuine</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="pencil" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Pencil Drawing</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> 3 Participants from each House</li>
+							<li> Item will be conducted On the Spot on the given subject/idea</li>
+							<li> Duration will not be more than 1 hour</li>
+							<li> Artist must bring the necessary accessories like black pencils and chart papers</li>
+							<li> Topic/ Theme will be given on the spot</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="clay" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Clay Modelling</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> 3 Participants from each House</li>
+							<li> Item will be conducted On the Spot on the given subject/idea</li>
+							<li> Duration will not be more than 2 hours </li>
+							<li> Artist must bring the necessary accessories including clay</li>
+							<li> Model must be creative and genuine</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="collage" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Collage</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> 3 Participants from each House</li>
+							<li> Item will be conducted on the spot</li>
+							<li> Duration will not be more than 2 hours </li>
+							<li> Participants are requested to bring their own scissors and other materials</li>
+							<li> Collage must be creative and genuine</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="classical" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Classical Music</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> 2 members from each House</li>
+							<li> No accompanist is allowed</li>
+							<li> Item can be presented either in Hindustani or Karnatik style</li>
+							<li> Maximum time permitted for the item is ten (10) minutes</li>
+							<li> Cinema songs are not allowed under this item</li>
+							<li> Sufficient thought and care must be exercised in the choice of raga and composition</li>
+							<li> Students may bring the sruthipetti</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="voice" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Voice of MITS</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Separate event for Malayalam and English</li>
+							<li> 2 members from each House</li>
+							<li> Maximum performance time– 7 mts</li>
+							<li> Karaoke / any single instrument is allowed</li>
+							<li> No classical/semi classical songs are allowed</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="mappila" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Mappilapattu</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> 2 participants from each House</li>
+							<li> Maximum time is 7 minutes</li>
+							<li> Karaoke/instruments are not allowed</li>
+							<li> Judgment of this item will be on the basis of quality of singing only</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="adaptune" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Adaptune</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Separate event for Malayalam and English</li>
+							<li> 2 members from each house</li>
+							<li> Participant should perform on a mix of three or four songs which will be played on the spot by the committee</li>
+							<li> Participant is free to use their imaginations and talent</li>
+							<li> Judgment will be based on the creativity, effectiveness of the performance, stage usage, choreography etc</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="folk" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Folk Dance</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Separate event for Malayalam and English</li>
+							<li> 2 members from each House</li>
+							<li> Only CD/DVD/Pendrive is permitted  Can use pre-recorded songs/ Karaoke song</li>
+							<li> The Dance can be either primitive or a folk dance but not a classical one</li>
+							<li> Duration of the dance should not be more than 10 minutes</li>
+							<li> Judgment will be based on the basis of Rhythm, Formation, Expression, Costumes, Make-up, Sets, and over-all effect</li>
+							<li> Artist must bring the necessary accessories</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="bharat" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Bharathanatyam</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Only for Girls</li>
+							<li> 1 member from each House</li>
+							<li> Each participant will be allowed up to 15 minutes including time for preparation, exit etc</li>
+							<li> Only CD/DVD/Pendrive is permitted  Can use pre-recorded songs/ Karaoke song</li>
+							<li> Judgment will be based basically on the qualities like Tal, Technique, Rhythm,Abhinaya or expression, costume, footwork, general impression etc</li>
+							<li> Artist must bring the necessary accessories</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="mono" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Mono Act</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> Two members from each House</li>
+							<li> Judgment will be based on qualities like ability to act, clarity of language, literary expression, originality, humour, general impression etc</li>
+							<li> Maximum time is 5 minutes</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="mimicry" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Mimicry</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> Two members from each House</li>
+							<li> Judgment will be based on qualities like ability to act, clarity of language, literary expression, originality, humour, general impression etc</li>
+							<li> Maximum time is 5 minutes</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="nadanpattu" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Nadanpattu</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Group-boys only/girls only/mixed)</li>
+							<li> One Group from each house</li>
+							<li> Number of participants -10 Nos</li>
+							<li> Maximum time is 10 minutes This does not include setting time which shall not be more than 5 minutes</li>
+							<li> Traditional Instruments are only allowed(Chenda,Elathalam,Thudi,Kaimani,and Thappu only)</li>
+							<li> Traditional costumes can be used (Kurtha/Jubba/Mundu are allowed)</li>
+							<li> The team may present, preferably those folk tunes which are recognized as folk tunes</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="groupd" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Group Dance</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Separate event for Malayalam and English</li>
+							<li> Maximum number of participants per group is 10 and minimum is 4</li>
+							<li> Judgment will be based on choreography, stage utilization, synchronization, costume etc</li>
+							<li> Maximum time is 10 minutes</li>
+							<li> Can use pre-recorded songs/ Karaoke song</li>
+							<li> Artist must bring the necessary accessories</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="groups" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Group Song</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> Maximum number of singers in a group can be 6 Maximum number of</li>
+							<li> participants playing instruments (non-singers) shall be 3 In addition, singers are also allowed to play instruments</li>
+							<li> Only students are allowed in a team as participants (singers/non-singers playing instruments)</li>
+							<li> The Group song should be taken from Indian songs which can be in any regional language</li>
+							<li> No film song should be presented as Group Song</li>
+							<li> Maximum time allowed for the group song is 10 minutes, excluding setting time</li>
+							<li> The setting time for a group song shall not exceed 5 minutes</li>
+							<li> Judging of this item will be on the basis of quality of singing only and not on makeup, costumes and actions of the team Sruthi, Tal, Rhythm, Harmony etc will be considered for the judgment</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="acapella" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Acapella</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> One team from each house ( 7 members)</li>
+							<li> Maximum 2 person can sing</li>
+							<li> Maximum time will be 7 minutes</li>
+							<li> No instruments are allowed</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="theme" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Theme Show</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> One team from each house</li>
+							<li> Number of participants -10Nos</li>
+							<li> Maximum time is 10 minutes</li>
+							<li> Can use pre-recorded back ground scores</li>
+							<li> Dressing should be decent and no vulgarity is allowed</li>
+							<li> Mr&amp;Ms MITS will be selected from this show</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="step" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Step N Synchro</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> Two dancers should perform in a half divided stage on either side</li>
+							<li> The performance must be mirror act and no action-reaction performance is allowed</li>
+							<li> Maximum time allotted is 8 minutes</li>
+							<li> Judgment will be based on the choreography, difficulty level, synchronization, expression etc</li>
+							<li> Number of participants -2 Nos (Either two boys or two girls)</li>
+							<li> Can use pre-recorded songs/ Karaoke song</li>
+							<li> Screen will be provided</li>
+							<li> Artist must bring the necessary accessories</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="mime" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Mime</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> Mime or Mookabhinayam is acting without words It is an art which expresses through gestures, postures and Facial expressions It portrays ideas, themes or tells a story, through physical movements only</li>
+							<li> Maximum No of 10 participants are allowed</li>
+							<li> Maximum time allotted for the item is Ten (10) minutes</li>
+							<li> Judgment will most likely be based on qualities like idea, creativity of presentation, use of make-up, costume, music and general impression</li>
+							<li> presentation, use of make-up, costume, music and general impression</li>
+							<li> Can use pre-recorded back ground scores</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="tableaux" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Tableaux</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> Maximum number of participants-10</li>
+							<li> Maximum time is 5 minutes including arrangements</li>
+							<li> Message must be conveyed before display</li>
+							<li> Can use pre-recorded back ground scores also</li>
+							<li> Artist must bring the necessary accessories</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="nostalgia" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Nostalgia</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Mixed even</li>
+							<li> One team from each house</li>
+							<li> Maximum number of participants allowed is 10</li>
+							<li> Participants should perform film songs which must be of films before 1990</li>
+							<li> Judgment will be based on the theme, creativity, effectiveness of the performance, coordination, choreography etc</li>
+							<li> Maximum time is 10 minutes</li>
+							<li> Can use pre-recorded songs/ Karaoke song</li>
+							<li> Artist must bring the necessary accessories</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="skit" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Skit</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> Maximum number of participants-10Nos</li>
+							<li> Skits are a short play either satirical or humorous in nature</li>
+							<li> Max Time allotted is 10 minutes</li>
+							<li> No personal remarks, aspersions, character assassination etc is allowed Use of Make-up, drapery and background music is allowed</li>
+							<li> The item will be judged basically on qualities like Theme, work on acting, stage craft, total design and general impression</li>
+							<li> Medium shall be English/Malayalam</li>
+							<li> Dialogue must be live</li>
+							<li> Can use pre-recorded back ground scores also</li>
+							<li> Artist must bring the necessary accessories</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="margam" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Margam Kali</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> Maximum number of participants allowed is Ten (10)</li>
+							<li> Maximum 10 dancers &amp; accompanists including singers allowed are 4</li>
+							<li> The team may consist of all girls</li>
+							<li> Duration of the dance should not be more than 10 minutes</li>
+							<li> Judgment will be based on the basis of Rhythm, Formation, Expression, Costumes, Make- up, Sets, and Over-all effect</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="thiruvathira" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Thriruvathira</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> Maximum number of participants allowed is Ten (10)</li>
+							<li> Maximum 10 dancers &amp; accompanists including singers allowed are 4</li>
+							<li> The team may consist of all boys, all girls or a mixture of both</li>
+							<li> Duration of the dance should not be more than 10 minutes</li>
+							<li> Judgment will be based on the basis of Rhythm, Formation, Expression, Costumes, Make- up, Sets, and Over-all effect</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="oppana" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Oppana</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> Maximum number of participants allowed is Ten (10)</li>
+							<li> Maximum 10 dancers &amp; accompanists including singers allowed are 4</li>
+							<li> The team may consist all girls </li>
+							<li> Duration of the dance should not be more than 10 minutes</li>
+							<li> Judgment will be based on the basis of Rhythm, Formation, Expression, Costumes, Make- up, Sets, and Over-all effect</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="vattappattu" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Vattappattu</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> Maximum number of participants allowed is Ten (10)</li>
+							<li> Duration of the event should not be more than 10 minutes</li>
+							<li> The songs used for Duffmuttu should be ‘Arabi Baith’</li>
+							<li> Judgment will be based on the basis of the ‘baith’, Rhythm, percussion and Over-all effect</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+			<div id="photo" class="modal fade" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Spot Photography</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li> The participants has to bring his/her own digital camera</li>
+							<li> The digital camera (Max 14 Mega Pixel) should have a memory card, which will be formatted by the judges before the commencement of the contest</li>
+							<li> The time limit will be 4 hours</li>
+							<li> The participants have to capture 5 photographs on the theme announced on the spot by the judges</li>
+							<li> No mixing, matching or morphing of photographs will be permitted Software such as Photoshop etc, for enhancing image is not permitted</li>
+							<li> The organizers will have all rights for the use of these pictures as and when they deem fit Digital images are evaluated on the basis of Impact b Composition c Technical quality d Suitability of the specific theme</li>
+							<li> The additional instructions will be announced on the spot</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="event" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-9">
+						<div id="event-carousel" class="carousel slide" data-interval="false">
+							<h2 class="heading">OFF STAGE EVENTS</h2>
+							<a class="even-control-left" href="#event-carousel" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							</a>
+							<a class="even-control-right" href="#event-carousel" data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							</a>
+							<div class="carousel-inner">
+								<div class="item active">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#essay">
+												<img class="img-responsive" src="images/event/essay.jpg" alt="event-image">
+												<h4>Essay Writing</h4>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#short">
+												<img class="img-responsive" src="images/event/story.jpg" alt="event-image">
+												<h4>Short Story Writing</h4>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#poetryw">
+												<img class="img-responsive" src="images/event/poetry.jpg" alt="event-image">
+												<h4>Poetry Writing</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#poetryr">
+												<img class="img-responsive" src="images/event/poetryrec.jpg" alt="event-image">
+												<h4>POETRY RECITATION </h4>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#quiz">
+												<img class="img-responsive" src="images/event/Quiz.jpg" alt="event-image">
+												<h4>Quiz</h4>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#elocution">
+												<img class="img-responsive" src="images/event/Elocution.jpg" alt="event-image">
+												<h4>Elocution</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#westvocal">
+												<img class="img-responsive" src="images/event/event1.jpg" alt="event-image">
+												<h4>Western Vocal Solo</h4>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#instrument">
+												<img class="img-responsive" src="images/event/event2.jpg" alt="event-image">
+												<h4>Instrumental Music </h4>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#painting">
+												<img class="img-responsive" src="images/event/painting.jpg" alt="event-image">
+												<h4>Painting </h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#cartoon">
+												<img class="img-responsive" src="images/event/cartooning.jpg" alt="event-image">
+												<h4>Cartooning</h4>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#pencil">
+												<img class="img-responsive" src="images/event/pencil.jpg" alt="event-image">
+												<h4>Pencil Drawing</h4>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#clay">
+												<img class="img-responsive" src="images/event/clay.jpg" alt="event-image">
+												<h4>Clay Modelling</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="single-event btn btn-info" data-toggle="modal" data-target="#collage">
+												<img class="img-responsive" src="images/event/collage.jpg" alt="event-image">
+												<h4>Collage</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="event2" class="section">
+			<div class="container">
+				<div class="col-sm-12 col-md-9">
+					<div id="event-carousel2" class="carousel slide" data-interval="false">
+						<h2 class="heading">ON STAGE EVENTS</h2>
+						<a class="even-control-left" href="#event-carousel2" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a class="even-control-right" href="#event-carousel2" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#classical">
+											<img class="img-responsive" src="images/event/classicalmusic.jpg" alt="event-image">
+											<h4>Classical Music</h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#voice">
+											<img class="img-responsive" src="images/event/voiceofmits.jpg" alt="event-image">
+											<h4>Voice of MITS </h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#mappila">
+											<img class="img-responsive" src="images/event/mapillapattu.jpg" alt="event-image">
+											<h4>Mappilapattu</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#adaptune">
+											<img class="img-responsive" src="images/event/adaptune.jpg" alt="event-image">
+											<h4>Adaptune (M/F)</h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#folk">
+											<img class="img-responsive" src="images/event/folkdance.jpg" alt="event-image">
+											<h4>Folk Dance (M/F)</h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#bharat">
+											<img class="img-responsive" src="images/event/bharatyanatyam.jpg" alt="event-image">
+											<h4>Bharathanatyam (G)</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#mono">
+											<img class="img-responsive" src="images/event/monoact.png" alt="event-image">
+											<h4>Mono Act</h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#mimicry">
+											<img class="img-responsive" src="images/event/mimicry.jpg" alt="event-image">
+											<h4>Mimicry</h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#nadanpattu">
+											<img class="img-responsive" src="images/event/nadanpattu.JPG" alt="event-image">
+											<h4>Nadanpattu</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#groupd">
+											<img class="img-responsive" src="images/event/groupdance.jpg" alt="event-image">
+											<h4>Group Dance </h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#groups">
+											<img class="img-responsive" src="images/event/groupsong.jpg" alt="event-image">
+											<h4>Group Song </h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#acapella">
+											<img class="img-responsive" src="images/event/acapella.jpg" alt="event-image">
+											<h4>Acapella</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#theme">
+											<img class="img-responsive" src="images/event/themeshow.jpg" alt="event-image">
+											<h4>Theme show</h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#step">
+											<img class="img-responsive" src="images/event/step-and-synchro.jpg" alt="event-image">
+											<h4>Step N Synchro</h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#mime">
+											<img class="img-responsive" src="images/event/mime.jpg" alt="event-image">
+											<h4>Mime</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#tableaux">
+											<img class="img-responsive" src="images/event/tableaux.jpg" alt="event-image">
+											<h4>Tableaux</h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#nostalgia">
+											<img class="img-responsive" src="images/event/nostalgia.jpg" alt="event-image">
+											<h4>Nostalgia (Mixed)</h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#skit">
+											<img class="img-responsive" src="images/event/skit.jpg" alt="event-image">
+											<h4>Skit</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#margam">
+											<img class="img-responsive" src="images/event/margamkali.jpg" alt="event-image">
+											<h4>Margam Kali</h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#thiruvathira">
+											<img class="img-responsive" src="images/event/thiruvathira.jpg" alt="event-image">
+											<h4>THIRUVATHIRAKALI</h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#oppana">
+											<img class="img-responsive" src="images/event/oppana.jpg" alt="event-image">
+											<h4>Oppana</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#vattappattu">
+											<img class="img-responsive" src="images/event/vattapattu.jpg" alt="event-image">
+											<h4>VATTAPPATTU</h4>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event btn btn-info" data-toggle="modal" data-target="#photo">
+											<img class="img-responsive" src="images/event/spotphoto.jpg" alt="event-image">
+											<h4>Spot photography</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="about" class="section">
+			<div class="guitar2">
+				<img class="img-responsive" src="images/butterfly.png" alt="guitar">
+			</div>
+			<div class="about-content">
+                <h2>About Varnam</h2>
+				<p>With over 30 events spread over six days, Varnam aims to create a time of ethereal bliss for all its patreons. With a wide variety of events to choose from, spread over 10 modules, patreons of the fest will always have a great time taking part in or viewing the various events of their choice and are sure to experince the 'Eternal Dream Time' while in Varnam.</p>
+			</div>
+		</section>
+		<section id="gallery" class="section">
+           <h1>Gallery</h1>
+			<div class="container1">
+				<div id="carousel3">
+					<figure id="f1"><image src=".//images/gallery/f1.JPG" width="200" height="120" alt=""></figure>
+					<figure id="f2"><image src=".//images/gallery/f2.JPG" width="200" height="120" alt=""></figure>
+					<figure id="f3"><image src=".//images/gallery/f3.JPG" width="200" height="120" alt=""></figure>
+					<figure id="f4"><image src=".//images/gallery/f4.JPG" width="200" height="120" alt=""></figure>
+					<figure id="f5"><image src=".//images/gallery/f5.JPG" width="200" height="120" alt=""></figure>
+					<figure id="f6"><image src=".//images/gallery/f6.JPG" width="200" height="120" alt=""></figure>
+					<figure id="f7"><image src=".//images/gallery/f7.JPG" width="200" height="120" alt=""></figure>
+					<figure id="f8"><image src=".//images/gallery/f8.JPG" width="200" height="120" alt=""></figure>
+					<figure id="f9"><image src=".//images/gallery/f9.JPG" width="200" height="120" alt=""></figure>
+				</div>
+			</div>
+			<div id="myModalg" class="modalg">
+				<span class="closemodalg">X</span>
+				<img class="modal-contentg" id="img01g"/>
+			</div>
+		</section>
+		<section id="score" class="section">
+			<div></div>
+		</section>
+		<section id="sponsor" class="section">
+			<div id="sponsor-carousel" class="carousel slide" data-interval="false">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2>Downloads</h2>
+							<div class="carousel-inner ">
+								<div class="item active " style="padding-left:100px;">
+									<ul>
+										<li><h3><b><a href="files/rules.pdf" target="_blank">General Instructions</a></b></h3></li>
+										<li><h3><b><a href="files/file2.pdf" target="_blank">Results</a></b></h3></li>
+										<li><h3><b><a href="files/file3.pdf" target="_blank">House Points</a></b></h3></li>
+										<li><h3><b><a href="files/Onstage_Event_Schedule_Final.pdf" target="_blank">Event Schedule</a></b></h3></li>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!--/#sponsor-->
+		<section id="contact" class="section">
+			<div class="contact-section">
+				<div class="container">
+                    <h1 style="color:white;text-align:center;"><b>Get in touch</b> </h1>
+					<div class="row">
+					<div class="col-sm-2"><br /></div>
+						<div class="col-sm-4 ">
+							<div class="contact-text">
+                                <h3><b>Contact</b></h3>
+								<address>
+									Prof. Baiju Karun : 9447009648 <br>
+                                    Prof. Anas.M : 7561017476 <br>
+                                    Sooraj Santhosh: 9567843163
+								</address>
+							</div>
+                        </div>
+						<div class="col-sm-4 ">
+							<div class="contact-address">
+                                <h3><b>Address</b></h3>
+								<address>
+									Muthoot Institute of Technology and Science <br>
+                                    Varikoli P.O, Puthencruz- 682308 <br>
+                                    PH: 0484-2732111/100 <br>
+                                    www.mgits.ac.in
+								</address>
+							</div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<div class="container">
+				<div class="text-center">
+					<p> Connect With Us</p>
+                    <a href="https://www.facebook.com/Varnam2k17/?ref=page_internal"> <i class="fa fa-facebook" aria-hidden="true"></i> </a>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script>
+			jQuery(document).ready(function($) {
+				$(window).load(function(){
+					$('.preloader').fadeOut('slow',function(){$(this).remove();});
+				});
+			});
+			$(".modal-body > ol").prepend("<b>Rules</b>");
+			$(".modal-body > ol > b").css("textAlign","center");
+			$("figure").click(function(){
+				var id = $(this).attr('id');
+				var modal = document.getElementById('myModalg');
+				var modalImg = document.getElementById("img01g");
+				modalImg.src ="images/gallery/"+id+".JPG" ;
+				modal.style.display = "block";
+				var span = document.getElementsByClassName("closemodalg")[0];
+				span.onclick = function() { 
+					modal.style.display = "none";
+				}
+			});
+		</script>
+	</body>
+</html>

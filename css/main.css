@@ -1,0 +1,828 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200,700);
+body {
+  font-family: 'Dosis', sans-serif;
+  font-size: 17px;
+  color: #fff
+}
+
+
+.btn {
+  border-radius: 0;
+  font-family: 'Yanone Kaffeesatz','sans-serif';
+  font-size: 20px;
+  padding: 9px 23px;
+}
+
+a {
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 40px
+}
+
+.navbar-toggle {
+  margin-top: 12px
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-toggle,
+.navbar-toggle:focus {
+  border:1px solid #fff;
+  outline: none;
+}
+
+
+/*************************
+*******Header CSS******
+**************************/
+
+.header-top {
+  display: block;
+  overflow: hidden;
+  padding: 25px;
+}
+
+.main-nav {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  background-color:white;
+}
+
+.main-nav
+.container {
+  width: 100%
+}
+
+.social-icons a {
+  font-size: 18px;
+  color: #fff;
+  padding-left:20px;
+}
+
+.social-icons .fa-facebook:hover {
+  color: #3B5997
+}
+
+.social-icons .fa-twitter:hover {
+  color:#29C5F6
+}
+
+.social-icons .fa-google-plus:hover {
+  color:#D13D2F
+}
+
+.social-icons .fa-youtube:hover{
+  color: #ec5538
+}
+
+.navbar-brand {
+  background-color: #ffffff;
+  height: 90px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 257px;
+}
+
+.navbar-brand img {
+  position: absolute;
+  top: -35px;
+}
+
+.navbar-right {
+  background-color: #ffffff;
+  padding:0 95px 0 0;
+  opacity: .9
+}
+
+.navbar-right li a {
+  padding: 35px 21px;
+  font-size: 22px;
+  color: #000000;
+  text-transform: uppercase;
+  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  font-weight: 300;
+}
+
+.navbar-right li a:hover,
+.navbar-right li a:focus,
+.navbar-right .active a {
+  background-color: #fff;
+  color: #000000
+}
+
+
+.fixed-menu {
+  position: fixed;
+  top: 0;
+}
+
+.fixed-menu .navbar-right {
+  padding: 0;
+}
+
+
+.fixed-menu .navbar-right li a {
+  font-size: 18px;
+  padding: 20px 25px;
+  text-shadow:inherit;
+}
+
+.fixed-menu .navbar-brand {
+  height: 60px;
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 0;
+  width: 125px;
+}
+
+.fixed-menu .navbar-brand img {
+  height:60px;
+  top: 0;
+}
+
+.fixed-menu .header-top {
+  display: none;
+}
+
+
+
+/*************************
+*******Home CSS******
+**************************/
+
+#home {
+  position: relative;
+  overflow: hidden;
+}
+
+#main-slider img {
+  width: 100%
+}
+
+#main-slider
+.carousel-caption {
+  background: none repeat scroll 0 0 #000000;
+  bottom: 35%;
+  float: center;
+  left: 0;
+  opacity: 0.8;
+  padding:10px 60px 35px;
+  text-transform: uppercase;
+  color: #fff;
+    left:20%;
+}
+
+
+#main-slider
+.carousel-caption h2 {
+  font-size: 38px;
+
+}
+
+#main-slider
+.carousel-caption h4 {
+  font-size: 24px;
+}
+
+#main-slider
+.carousel-caption a {
+  font-size: 22px;
+  color: #2da1c5
+}
+
+#main-slider
+.carousel-caption a:hover {
+  color: #2588a6
+}
+
+#main-slider
+.carousel-caption a:hover i {
+  margin-left: 35px
+}
+
+#main-slider
+.carousel-caption a i {
+  margin-left: 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#main-slider
+.carousel-indicators li {
+  background-color:#1B7B98;
+  border: 1px solid #1B7B98;
+}
+
+#main-slider
+.carousel-indicators li.active {
+  background-color:#fff;
+  border: 1px solid #fff;
+}
+
+
+
+/*******/
+
+#gallery-slider img {
+  width: 100%
+}
+
+#gallery-slider
+.carousel-caption {
+  background: none repeat scroll 0 0 #000000;
+  bottom: 35%;
+  float: center;
+  left: 0;
+  opacity: 0.8;
+  padding:10px 60px 35px;
+  text-transform: uppercase;
+  color: #fff;
+    left:20%;
+}
+
+
+#gallery-slider
+.carousel-caption h2 {
+  font-size: 38px;
+
+}
+
+#gallery-slider
+.carousel-caption h4 {
+  font-size: 24px;
+}
+
+#gallery-slider
+.carousel-caption a {
+  font-size: 22px;
+  color: #2da1c5
+}
+
+#gallery-slider
+.carousel-caption a:hover {
+  color: #2588a6
+}
+
+#gallery-slider
+.carousel-caption a:hover i {
+  margin-left: 35px
+}
+
+#gallery-slider
+.carousel-caption a i {
+  margin-left: 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#gallery-slider
+.carousel-indicators li {
+  background-color:#1B7B98;
+  border: 1px solid #1B7B98;
+}
+
+#gallery-slider
+.carousel-indicators li.active {
+  background-color:#fff;
+  border: 1px solid #fff;
+}
+
+
+
+
+
+
+
+/*************************
+*******Explore CSS******
+**************************/
+
+#explore {
+  background-color: #ffffff;
+  background-image: url("../images/event-bg123.jpg");
+  background-position: center bottom;
+
+  background-repeat:no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding: 130px 0 100px;
+}
+
+.watch {
+  position: absolute;
+  left: 0;
+  top: 7%;
+}
+
+#explore h2 {
+  font-size: 42px;
+  text-transform: uppercase;
+  text-align: center;
+  color:#004d40;
+  font-weight:900;
+}
+
+ /*************************
+*******Event CSS******
+**************************/
+#rules{
+  background-color: #33888F;
+  background-image: url("../images/event-bg123.jpg");
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#rules h2{
+  color: #212121;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: 70px;
+  text-transform: uppercase;
+}
+#event,#event2 {
+  background-color: #ffffff;
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.guitar {
+  position: absolute;
+  right:0;
+  top: 0
+}
+
+#event h2,#event2 h2 {
+  color: #000000;
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  margin-top: 70px;
+  text-transform: uppercase;
+}
+
+.single-event {
+  margin-bottom: 70px;
+}
+
+.single-event h4 {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+
+.single-event h5 {
+  font-size: 18px;
+  font-weight: 100;
+  display: block;
+}
+
+#event-carousel,#event-carousel2 {
+  position: relative;
+}
+#event-carousel2 ol{
+  font-style: italic;
+  font-weight:300;
+  font-size:19px;
+  color:#fafafa;
+}
+.even-control-left,
+.even-control-right {
+  position: absolute;
+  font-size: 24px;
+  color: #101010;
+  top: 0;
+}
+
+.even-control-left {
+  right: 3%
+}
+
+.even-control-right {
+  right: 0;
+}
+
+
+/*************************
+*******About CSS**********
+**************************/
+
+#about {
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  display: flex;
+    color: black;
+}
+
+.guitar2 {
+  top: 0;
+  width: 50%;
+}
+
+.guitar2 img {
+  padding-top: 3%;
+}
+
+.about-content {
+  width: 50%;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px 70px 110px;
+}
+
+
+#about h2 {
+  margin-bottom: 23px;
+}
+
+.about-content p {
+  font-size: 21px;
+  font-family: 'Dosis',sans-serif;
+}
+
+#about .btn-primary {
+  background-color: #137c61;
+  color: #fff;
+  text-transform: capitalize;
+  border: none;
+  margin-top: 28px;
+}
+
+#about .btn-primary:hover {
+  background-color: #126d55
+}
+
+
+
+/*************************
+******Twitter CSS****
+**************************/
+
+#twitter {
+  background-color: #ecedef;
+  background-image: url("../images/twitter-bg.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat:no-repeat;
+  position: relative;
+  padding: 95px 0 90px;
+  overflow: hidden;
+}
+
+.twit {
+  position: absolute;
+  left: 0;
+  top:-42%;
+}
+
+#twitter-feed .item {
+  text-align: center;
+}
+
+#twitter-feed .item img {
+  display: inline-block;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background-color: #c5c8ce;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+#twitter-feed .item a,
+#twitter-feed .item p {
+  font-size: 24px;
+  font-weight: 300;
+  font-family: 'Yanone Kaffeesatz','sans-serif';
+}
+
+#twitter-feed .item p {
+  color: #3D3D3D;
+}
+
+#twitter-feed .item a {
+  color:#00c3ff;
+}
+
+.twitter-control-left,
+.twitter-control-right {
+  position: absolute;
+  color: #00c3ff;
+  top: 59%;
+  font-size: 24px
+}
+
+.twitter-control-left {
+  left: 0;
+}
+
+.twitter-control-right {
+  right:0;
+}
+
+
+
+/*************************
+******Sponsor CSS****
+**************************/
+
+#sponsor {
+  background-image: url("../images/sponsor-bg.jpg");
+  background-position:50% 0;
+  background-size: cover;
+  background-repeat:no-repeat;
+  position: relative;
+}
+#sponsor li{
+  text-align: center;
+  box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.05),
+   inset 0px 3px 15px 0px rgba(0,0,0,0.5),
+    0px 1px 1px 0px rgba(255,255,255,0.08);
+  background-color: white;
+  color: #e1f5fe!important;
+    opacity: 0.6;
+}
+.light {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#sponsor .col-sm-10 {
+  z-index: 10;
+}
+
+#sponsor h2 {
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+
+#sponsor .item ul {
+  padding: 0;
+}
+
+
+#sponsor .item ul li {
+  display: inline-block;
+  list-style: none;
+  width: 33.33%;
+  margin-bottom: 75px;
+}
+
+#sponsor .item ul li:last-child {
+  margin-right: 0
+}
+
+.sponsor-control-left,
+.sponsor-control-right {
+  color: #FFFFFF;
+  font-size: 24px;
+  position: absolute;
+  top: 20%;
+}
+
+.sponsor-control-left {
+  right: 12%
+}
+
+.sponsor-control-right {
+  right: 10%
+}
+
+
+/*************************
+******Map CSS****
+**************************/
+#map {
+  position: relative;
+}
+
+#gmap {
+  height:450px;
+}
+
+
+/*************************
+******Contact CSS****
+**************************/
+
+.contact-section {
+  background-color: #ffffff;
+  background-image: url("../images/contact-bg.jpg");
+  background-position:60% 0;
+  background-size:cover;
+
+  position: relative;
+}
+
+.ear-piece {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#contact .container {
+  padding-top:47px;
+}
+
+#contact h3 {
+  text-transform:inherit;
+  color: #ffffff;
+    font-size: 21px;
+}
+
+#contact-section h3 {
+  margin-bottom: 25px
+}
+
+#contact address {
+  font-size: 21px;
+  color: #ffffff;
+}
+
+.contact-text {
+  margin-bottom: 35px;
+  display: block;
+}
+
+
+#contact-section .form-control {
+  border-color: #ae750d;
+  box-shadow:none;
+  outline: 0 none;
+  border-radius: 0;
+  color: #797979;
+  font-size: 18px;
+}
+
+#contact-section .form-control:focus {
+  border-color: #ae750d;
+}
+
+#contact-section input {
+  height: 44px;
+}
+
+#contact-section textarea {
+  height: 90px;
+  resize:none;
+}
+
+#contact-section .btn-primary {
+  background-color: #373737;
+  color: #f7ab24;
+  border: none;
+  font-size: 24px;
+  padding: 6px 42px;
+  margin-bottom: 110px;
+  margin-top: 10px
+}
+
+#contact-section .btn-primary:hover {
+  background-color: #212020;
+  color: #fff
+}
+
+
+
+/*************************
+******Footer CSS****
+**************************/
+
+#footer {
+  background-color: white;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  font-size: 20px;
+  padding: 35px 0;
+}
+
+#footer a {
+  color:#f7ab24
+}
+
+#footer a:hover {
+  color:#1B7B98
+}
+
+
+.btn-info {
+    color: #fff;
+    background-color:saddlebrown;
+    border-color: saddlebrown;
+    
+}
+
+
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {
+    color: #fff;
+    background-color: sienna;
+}
+
+
+
+
+
+
+h1{
+	display: table;
+	margin: 5% auto 0;
+	text-transform: uppercase;
+	
+	font-size: 4em;
+	
+    color: black;
+}
+.container1{
+	margin: 4% auto;
+	width: 210px;
+	height: 140px;
+	position: relative;
+	perspective: 1000px;
+}
+#carousel3{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: rotation 20s infinite linear;
+}
+#carousel3:hover{
+	animation-play-state: paused;
+}
+#carousel3 figure{
+	display: block;
+	position: absolute;
+	width: 186px;
+	height: 116px;
+	left: 10px;
+	top: 10px;
+	background: black;
+	overflow: hidden;
+	border: solid 5px black;
+}
+#carousel3 figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+#carousel3 figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+#carousel3 figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+#carousel3 figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+#carousel3 figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+#carousel3 figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+#carousel3 figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+#carousel3 figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+#carousel3 figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+
+imgage{
+	-webkit-filter: grayscale(1);
+	cursor: pointer;
+	transition: all .5s ease;
+}
+imgage:hover{
+	-webkit-filter: grayscale(0);
+  transform: scale(1.2,1.2);
+}
+
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}
+
